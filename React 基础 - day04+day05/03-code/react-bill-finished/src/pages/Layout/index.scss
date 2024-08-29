@@ -1,0 +1,29 @@
+.kaLayout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+
+  .page {
+    height: 618px;
+  }
+
+  .tabbar {
+    height: 49px;
+    .adm-tab-bar-item {
+      color: #888c98;
+    }
+
+    .adm-tab-bar-item-active {
+      color: rgb(105, 174, 120);
+    }
+  }
+}
+
+.kaDate {
+  .adm-picker-header {
+    a {
+      color: #69ae78;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  /* 内容 */
+  .content-wrap {
+    width: 100%;
+    height: calc(100vh - 40px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    transform: translateZ(0);
+  }
+  .content {
+    flex: 1 1 auto;
+    display: flex;
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .list-content {
+    flex: 1 1;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    z-index: 2;
+    background-color: #fff;
+  }
+  .list-fixed-title {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    font-size: 14px;
+    line-height: 24px;
+    color: #222426;
+    padding: 10px 8px 13px;
+    background-color: #fff;
+  }
+  .goods-list {
+    width: 100%;
+    flex: 1 1;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    & > div:last-child {
+      margin-bottom: 300px;
+    }
+  }
+}

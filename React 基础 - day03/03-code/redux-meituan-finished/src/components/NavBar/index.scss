@@ -1,0 +1,107 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  min-height: 40px;
+  background-color: #ffffff;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: #e4e4e4;
+    transform: scale(1, 0.5);
+    transform-origin: center bottom;
+  }
+
+  .menu {
+    display: flex;
+    height: 100%;
+  }
+
+  .menu-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    width: 80px;
+    box-sizing: border-box;
+    color: #666666;
+    font-size: 16px;
+  }
+  .menu-item.active {
+    color: #333;
+    font-weight: bolder;
+  }
+
+  .menu-active-bar {
+    display: inline-block;
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    width: 100%;
+    transition: 0.2s;
+    height: 0px;
+    border-radius: 1px;
+  }
+  .menu-active-bar::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: 0px;
+    left: 21px;
+    width: 20px;
+    border-bottom: solid 2px #ffd300;
+  }
+
+  .menu-comment {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 2px;
+    max-width: 31px;
+    height: 16px;
+    line-height: 1;
+    font-size: 10px;
+    color: #999;
+  }
+
+  /* 搜索 */
+  .menu-search {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    /* width: 120px; */
+    height: 100%;
+    margin: 0 10px;
+  }
+  .menu-form {
+    display: flex;
+    align-items: center;
+    background: #eee;
+    height: 25px;
+    border-radius: 15px;
+  }
+  .menu-search-icon {
+    background: url(https://zqran.gitee.io/images/waimai/search-icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 12px;
+    height: 12px;
+    -webkit-flex: none;
+    flex: none;
+    margin-left: 6px;
+    margin-right: 4px;
+  }
+  .menu-search-text {
+    font-size: 11px;
+    color: #858687;
+    text-align: center;
+    margin-right: 10px;
+  }
+}

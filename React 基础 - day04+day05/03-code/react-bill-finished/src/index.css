@@ -1,0 +1,39 @@
+/* @font-face {
+  font-family: 'mtsi-font';
+  src: url('./images/6002990d.woff');
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: mtsi-font, 'PingFangSC-Regular', Hiragino Sans GB, Arial,
+    Helvetica, '宋体', sans-serif;
+  font-size: 14px;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+dl,
+dd,
+p,
+h3 {
+  margin: 0;
+}
+
+.app {
+  height: 100%;
+  width: 100%;
+}

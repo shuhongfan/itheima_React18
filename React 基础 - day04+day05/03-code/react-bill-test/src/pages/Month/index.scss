@@ -1,0 +1,82 @@
+.monthlyBill {
+  --ka-text-color: #191d26;
+  height: 100%;
+  background: linear-gradient(180deg, #ffffff, #f5f5f5 100%);
+  background-size: 100% 240px;
+  background-repeat: no-repeat;
+  background-color: rgba(245, 245, 245, 0.9);
+  color: var(--ka-text-color);
+
+  .nav {
+    --adm-font-size-10: 16px;
+    color: #121826;
+    background-color: transparent;
+    .adm-nav-bar-back-arrow {
+      font-size: 20px;
+    }
+  }
+
+  .content {
+    height: 573px;
+    padding: 0 10px;
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+      display: none; /* Safari and Chrome */
+    }
+
+    > .header {
+      height: 135px;
+      padding: 20px 20px 0px 18.5px;
+      margin-bottom: 10px;
+      background-image: url(https://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/reactbase/ka/month-bg.png);
+      background-size: 100% 100%;
+
+      .date {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        font-size: 16px;
+
+        .arrow {
+          display: inline-block;
+          width: 7px;
+          height: 7px;
+          margin-top: -3px;
+          margin-left: 9px;
+          border-top: 2px solid #121826;
+          border-left: 2px solid #121826;
+          transform: rotate(225deg);
+          transform-origin: center;
+          transition: all 0.3s;
+        }
+        .arrow.expand {
+          transform: translate(0, 2px) rotate(45deg);
+        }
+      }
+    }
+  }
+  .twoLineOverview {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+
+      .money {
+        height: 24px;
+        line-height: 24px;
+        margin-bottom: 5px;
+        font-size: 18px;
+      }
+      .type {
+        height: 14px;
+        line-height: 14px;
+        font-size: 12px;
+      }
+    }
+  }
+}

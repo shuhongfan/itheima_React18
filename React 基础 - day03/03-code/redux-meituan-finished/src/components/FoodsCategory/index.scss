@@ -1,0 +1,19 @@
+.category {
+  .cate-list {
+    & > .cate-goods:last-child {
+      padding-bottom: 0;
+    }
+  }
+  .cate-title {
+    font-size: 14px;
+    line-height: 24px;
+    color: #222426;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 8px 13px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

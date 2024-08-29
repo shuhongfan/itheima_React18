@@ -1,0 +1,27 @@
+.goods-count {
+  font-size: 16px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+
+  .minus,
+  .plus {
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+    position: relative;
+  }
+  .minus {
+    margin-right: 12.5px;
+    background-image: url(https://zqran.gitee.io/images/waimai/minus.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .plus {
+    margin-left: 12.5px;
+    background-image: url(https://zqran.gitee.io/images/waimai/plus.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}

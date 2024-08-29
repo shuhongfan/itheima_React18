@@ -1,0 +1,248 @@
+.cartContainer {
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  bottom: constant(safe-area-inset-bottom);
+  bottom: env(safe-area-inset-bottom);
+  left: constant(safe-area-inset-left);
+  right: env(safe-area-inset-right);
+
+  .cartTipContainer {
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 34.5px;
+    height: 54px;
+    z-index: 2;
+    border-radius: 12px 12px 0 0;
+    background: #fff8e1;
+    text-align: center;
+    font-size: 12px;
+    color: #222426;
+    padding-top: 6px;
+  }
+
+  .cart {
+    z-index: 2;
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 13px;
+    background: #222426;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    color: #858687;
+    height: 50px;
+
+    .icon {
+      width: 47px;
+      height: 69px;
+      background: #333;
+      position: relative;
+      top: -10px;
+      margin: 0 10px;
+      background: url(https://zqran.gitee.io/images/waimai/cart-1.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      flex-shrink: 0;
+    }
+    .icon.fill {
+      background: url(https://zqran.gitee.io/images/waimai/cart-2.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .cartCornerMark {
+      position: absolute;
+      right: -5px;
+      top: 32px;
+      line-height: 30px;
+      color: #fff;
+      background-color: #fb4e44;
+      font-size: 20px;
+      transform: scale(0.5) translate(50%, -50%);
+      border-radius: 50%;
+      text-align: center;
+      width: 30px;
+      height: 30px;
+    }
+    .main {
+      flex: 1 1 auto;
+      font-size: 12px;
+    }
+    .payableAmount {
+      font-size: 22px;
+      color: #fff;
+      margin-right: 5px;
+    }
+    .payableAmountUnit {
+      font-size: 14px;
+      display: inline-block;
+    }
+    .text {
+      font-size: 12px;
+    }
+    .minFee {
+      font-size: 14px;
+      font-weight: 500;
+      padding: 0 12px;
+      line-height: 50px;
+      color: #ffffff;
+    }
+    .goToPreview {
+      color: #333;
+      font-weight: 500;
+      font-size: 14px;
+      color: #222426;
+      height: 50px;
+      line-height: 50px;
+      background: #f8c74e;
+      background-image: linear-gradient(135deg, #ffdd33 0%, #ffbb33 100%);
+      border-radius: 0 22.5px 22.5px 0;
+      width: 84px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .cartPanel {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    background: #fff;
+    left: 0;
+    right: 0;
+    color: #333;
+    z-index: 1;
+    border-radius: 12px 12px 0 0;
+    transition: transform 200ms ease 0s;
+    transform: translateY(0px);
+
+    .header {
+      height: 40.5px;
+      box-sizing: border-box;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+
+      .text {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16.5px;
+        height: 16.5px;
+        color: #33312e;
+      }
+      .clearCart {
+        font-size: 12px;
+        line-height: 16.5px;
+        height: 16.5px;
+        color: #666666;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        &::before {
+          content: '';
+          display: inline-block;
+          background: url(https://zqran.gitee.io/images/waimai/del.png);
+          width: 12px;
+          height: 12px;
+          margin-right: 2.5px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          vertical-align: bottom;
+        }
+      }
+    }
+    .scrollArea {
+      max-height: 350px;
+      overflow: scroll;
+      border-top: 1px solid rgba(216, 216, 216, 0.3);
+
+      &::after {
+        content: '';
+        display: block;
+        height: 90px;
+      }
+
+      .cartItem {
+        position: relative;
+        display: flex;
+        padding: 16px 0;
+        margin: 0 15px;
+        box-sizing: border-box;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          height: 1px;
+          left: 70px;
+          right: 0;
+          background-color: rgba(232, 232, 232, 0.3);
+        }
+      }
+      .shopPic {
+        width: 60px;
+        height: 60px;
+        border-radius: 6px;
+      }
+      .main {
+        margin-left: 10px;
+        padding-right: 10px;
+        flex: auto;
+      }
+      .skuInfo {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+      .name {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        color: #33312e;
+      }
+      .payableAmount {
+        height: 29px;
+        margin-top: 15px;
+        display: flex;
+        align-items: flex-start;
+        font-weight: 600;
+        color: #fb4e44;
+      }
+      .yuan {
+        font-size: 12px;
+        line-height: 16.5px;
+        margin-top: 10px;
+        width: 11.5px;
+      }
+      .price {
+        font-size: 18px;
+        line-height: 25px;
+        margin-top: 4px;
+      }
+      .skuBtnWrapper {
+        width: 70px;
+        margin-top: 51.5px;
+      }
+    }
+  }
+
+  .cartOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+  }
+  .cartOverlay.visible,
+  .cartPanel.visible {
+    display: block;
+  }
+}

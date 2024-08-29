@@ -1,0 +1,169 @@
+.keepAccounts {
+  --ka-bg-color: #daf2e1;
+  --ka-color: #69ae78;
+  --ka-border-color: #191d26;
+
+  height: 100%;
+  background-color: var(--ka-bg-color);
+
+  .nav {
+    --adm-font-size-10: 16px;
+    color: #121826;
+    background-color: transparent;
+    &::after {
+      height: 0;
+    }
+
+    .adm-nav-bar-back-arrow {
+      font-size: 20px;
+    }
+  }
+
+  .header {
+    height: 132px;
+
+    .kaType {
+      padding: 9px 0;
+      text-align: center;
+
+      .adm-button {
+        --adm-font-size-9: 13px;
+
+        &:first-child {
+          margin-right: 10px;
+        }
+      }
+      .selected {
+        color: #fff;
+        --background-color: var(--ka-border-color);
+      }
+    }
+
+    .kaFormWrapper {
+      padding: 10px 22.5px 20px;
+
+      .kaForm {
+        display: flex;
+        padding: 11px 15px 11px 12px;
+        border: 0.5px solid var(--ka-border-color);
+        border-radius: 9px;
+        background-color: #fff;
+
+        .date {
+          display: flex;
+          align-items: center;
+          height: 28px;
+          padding: 5.5px 5px;
+          border-radius: 4px;
+          // color: #4f825e;
+          color: var(--ka-color);
+          background-color: var(--ka-bg-color);
+
+          .icon {
+            margin-right: 6px;
+            font-size: 17px;
+          }
+          .text {
+            font-size: 16px;
+          }
+        }
+
+        .kaInput {
+          flex: 1;
+          display: flex;
+          align-items: center;
+
+          .input {
+            flex: 1;
+            margin-right: 10px;
+            --text-align: right;
+            --font-size: 24px;
+            --color: var(--ka-color);
+            --placeholder-color: #d1d1d1;
+          }
+
+          .iconYuan {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+  }
+  .kaTypeList {
+    height: 490px;
+    padding: 20px 11px;
+    padding-bottom: 70px;
+    overflow-y: scroll;
+    background: #ffffff;
+    border-radius: 20px 20px 0 0;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+      display: none; /* Safari and Chrome */
+    }
+
+    .kaType {
+      margin-bottom: 25px;
+      font-size: 12px;
+      color: #333;
+
+      .title {
+        padding-left: 5px;
+        margin-bottom: 5px;
+        font-size: 13px;
+        color: #808080;
+      }
+      .list {
+        display: flex;
+
+        .item {
+          width: 65px;
+          height: 65px;
+          padding: 9px 0;
+          margin-right: 7px;
+          text-align: center;
+          border: 0.5px solid #fff;
+          &:last-child {
+            margin-right: 0;
+          }
+
+          .icon {
+            height: 25px;
+            line-height: 25px;
+            margin-bottom: 5px;
+            font-size: 25px;
+          }
+        }
+        .item.selected {
+          border: 0.5px solid var(--ka-border-color);
+          border-radius: 5px;
+          background: var(--ka-bg-color);
+        }
+      }
+    }
+  }
+
+  .btns {
+    position: fixed;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+
+    .btn {
+      width: 200px;
+      --border-width: 0;
+      --background-color: #fafafa;
+      --text-color: #616161;
+      &:first-child {
+        margin-right: 15px;
+      }
+    }
+    .btn.save {
+      --background-color: var(--ka-bg-color);
+      --text-color: var(--ka-color);
+    }
+  }
+}

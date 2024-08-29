@@ -1,0 +1,14 @@
+.tabContainer {
+  position: fixed;
+  height: 50px;
+  top: 0;
+  width: 100%;
+}
+
+.listContainer {
+  position: fixed;
+  top: 50px;
+  bottom: 0px;
+  width: 100%;
+  overflow: auto;
+}

@@ -1,0 +1,83 @@
+.dailyBill {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background: #ffffff;
+
+  .header {
+    --ka-text-color: #888c98;
+    padding: 15px 15px 10px 15px;
+
+    .dateIcon {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 21px;
+      margin-bottom: 9px;
+
+      .date {
+        font-size: 14px;
+      }
+      .icon {
+        width: 19px;
+        height: 19px;
+        color: var(--ka-text-color);
+        transform-origin: center;
+        transition: all 0.3s;
+        transform: rotate(180deg);
+      }
+      .icon.expand {
+        transform: rotate(0);
+      }
+    }
+  }
+
+  .billList {
+    display: none;
+    padding: 15px 10px 15px 15px;
+
+    .bill {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 43px;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .icon {
+        margin-right: 10px;
+        font-size: 25px;
+      }
+      .detail {
+        flex: 1;
+        padding: 4px 0;
+
+        .billType {
+          height: 17px;
+          line-height: 17px;
+          font-size: 15px;
+        }
+      }
+      .money {
+        font-size: 17px;
+
+        &.pay {
+          color: #ff917b;
+        }
+        &.income {
+          color: #4f827c;
+        }
+      }
+    }
+  }
+}
+.dailyBill.expand {
+  .header {
+    border-bottom: 1px solid #ececec;
+  }
+  .billList {
+    display: block;
+  }
+}

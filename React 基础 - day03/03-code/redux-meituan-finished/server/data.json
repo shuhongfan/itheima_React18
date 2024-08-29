@@ -1,0 +1,145 @@
+{
+  "takeaway": [
+    {
+      "tag": "318569657",
+      "name": "一人套餐",
+      "foods": [
+        {
+          "id": 8078956697,
+          "name": "烤羊肉串(10串)",
+          "like_ratio_desc": "好评度100%",
+          "month_saled": 40,
+          "unit": "10串",
+          "food_tag_list": [
+            "点评网友推荐"
+          ],
+          "price": 90,
+          "picture": "https://zqran.gitee.io/images/waimai/8078956697.jpg",
+          "description": "",
+          "tag": "318569657",
+          "count": 1
+        },
+        {
+          "id": 7384994864,
+          "name": "腊味煲仔饭",
+          "like_ratio_desc": "好评度81%",
+          "month_saled": 100,
+          "unit": "1人份",
+          "food_tag_list": [],
+          "price": 39,
+          "picture": "https://zqran.gitee.io/images/waimai/7384994864.jpg",
+          "description": "",
+          "tag": "318569657",
+          "count": 1
+        },
+        {
+          "id": 2305772036,
+          "name": "鸡腿胡萝卜焖饭",
+          "like_ratio_desc": "好评度91%",
+          "month_saled": 300,
+          "unit": "1人份",
+          "food_tag_list": [],
+          "price": 34.32,
+          "picture": "https://zqran.gitee.io/images/waimai/2305772036.jpg",
+          "description": "主料：大米、鸡腿、菜心、胡萝卜",
+          "tag": "318569657",
+          "count": 1
+        },
+        {
+          "id": 2233861812,
+          "name": "小份酸汤莜面鱼鱼+肉夹馍套餐",
+          "like_ratio_desc": "好评度73%",
+          "month_saled": 600,
+          "unit": "1人份",
+          "food_tag_list": [
+            "“口味好,包装很好～点赞”"
+          ],
+          "price": 34.32,
+          "picture": "https://zqran.gitee.io/images/waimai/2233861812.jpg",
+          "description": "酸汤莜面鱼鱼，主料：酸汤、莜面 肉夹馍，主料：白皮饼、猪肉",
+          "tag": "318569657",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "tag": "82022594",
+      "name": "特色烧烤",
+      "foods": [
+        {
+          "id": 3823780596,
+          "name": "藤椒鸡肉串",
+          "like_ratio_desc": "",
+          "month_saled": 200,
+          "unit": "10串",
+          "food_tag_list": [
+            "点评网友推荐"
+          ],
+          "price": 6,
+          "picture": "https://zqran.gitee.io/images/waimai/3823780596.jpg",
+          "description": "1串。藤椒味，主料：鸡肉",
+          "tag": "82022594",
+          "count": 1
+        },
+        {
+          "id": 6592009498,
+          "name": "烤羊排",
+          "like_ratio_desc": "",
+          "month_saled": 50,
+          "unit": "1人份",
+          "food_tag_list": [],
+          "price": 169,
+          "picture": "https://zqran.gitee.io/images/waimai/6592009498.jpg",
+          "description": "6-8个月草原羔羊肋排，烤到皮脆肉香",
+          "tag": "82022594",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "tag": "98147100",
+      "name": "杂粮主食",
+      "foods": [
+        {
+          "id": 4056954171,
+          "name": "五常稻花香米饭",
+          "like_ratio_desc": "",
+          "month_saled": 1000,
+          "unit": "约300克",
+          "food_tag_list": [],
+          "price": 5,
+          "picture": "https://zqran.gitee.io/images/waimai/4056954171.jpg",
+          "description": "浓浓的稻米清香，软糯Q弹有嚼劲",
+          "tag": "98147100",
+          "count": 1
+        },
+        {
+          "id": 740430262,
+          "name": "小米发糕(3个)",
+          "like_ratio_desc": "好评度100%",
+          "month_saled": 100,
+          "unit": "3块",
+          "food_tag_list": [],
+          "price": 13,
+          "picture": "https://zqran.gitee.io/images/waimai/740430262.jpg",
+          "description": "柔软蓬松，葡萄干和蔓越莓酸甜适口",
+          "tag": "98147100",
+          "count": 1
+        },
+        {
+          "id": 7466390504,
+          "name": "沙枣玉米窝头(3个)",
+          "like_ratio_desc": "好评度100%",
+          "month_saled": 100,
+          "unit": "3个",
+          "food_tag_list": [],
+          "price": 13,
+          "picture": "https://zqran.gitee.io/images/waimai/7466390504.jpg",
+          "description": "",
+          "tag": "98147100",
+          "count": 1
+        }
+      ]
+    }
+  ]
+}

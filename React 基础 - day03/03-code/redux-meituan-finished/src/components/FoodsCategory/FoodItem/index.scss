@@ -1,0 +1,135 @@
+.cate-goods {
+  padding-bottom: 28px;
+  box-sizing: border-box;
+  position: relative;
+
+  .goods-img-wrap {
+    display: inline-block;
+    width: 95px;
+    height: 95px;
+    flex: 0 0 auto;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-top: 2.5px;
+    position: absolute;
+    left: 8px;
+    top: 0;
+  }
+  .goods-img {
+    display: inline-block;
+    width: 95px;
+    height: 95px;
+    object-fit: cover;
+    flex: 0 0 auto;
+    border-radius: 6px;
+    border: 0.5 solid rgba(0, 0, 0, 0.06);
+  }
+  .goods-zhaopai {
+    display: inline-block;
+    vertical-align: middle;
+    height: 14px;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+  }
+
+  .goods-info {
+    padding: 0 16px 0 111px;
+  }
+  .goods-desc {
+    min-height: 73px;
+    margin-bottom: 8px;
+  }
+  .goods-count {
+    display: flex;
+    height: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+  }
+  .goods-detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+  .goods-title {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    font-size: 16px;
+    font-weight: 600;
+    color: #222426;
+    line-height: 20px;
+    margin-bottom: 6px;
+  }
+  .goods-unit {
+    flex: 0 0 auto;
+    font-size: 12px;
+    line-height: 16px;
+    height: 16px;
+    padding: 0 4px;
+    display: inline-block;
+    border-radius: 4px;
+    background: #f5f5f6;
+    margin-right: 2px;
+  }
+  .goods-detail-text {
+    flex: auto;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 14px;
+    font-size: 12px;
+    color: #222426;
+    word-break: break-all;
+  }
+  .goods-tag {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 14px;
+    color: #ff8000;
+    background-color: #fff5e2;
+    border-radius: 5px;
+    padding: 1px 4px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    max-width: 168.75px;
+    max-height: 21px;
+  }
+  .goods-sales-volume {
+    font-size: 12px;
+    color: #858687;
+    line-height: 14px;
+    position: relative;
+    width: 100%;
+  }
+  .goods-sales-volume > :first-child {
+    margin-right: 8px;
+  }
+
+  .goods-price-count {
+    display: flex;
+    height: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+  }
+  .goods-price {
+    color: #ff4a26;
+    line-height: 20px;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .goods-price-unit {
+    font-size: 12px;
+    line-height: 14px;
+    margin-right: 1px;
+  }
+}

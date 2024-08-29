@@ -1,0 +1,52 @@
+.list-menu {
+  height: 100%;
+  width: 95px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  position: relative;
+  overflow: scroll;
+  margin-left: -15px;
+  padding-left: 15px;
+  background: #f5f5f5;
+
+  .list-menu-item {
+    position: relative;
+    overflow: hidden;
+    padding: 16px;
+    color: #666666;
+    text-align: left;
+    line-height: 16px;
+    font-size: 12px;
+
+    .cornerMark {
+      position: absolute;
+      top: 1px;
+      right: 0px;
+      color: #fff;
+      background-color: #fb4e44;
+      font-size: 10px;
+      width: 24px;
+      height: 24px;
+      font-size: 20px;
+      line-height: 24px;
+      -webkit-transform: scale(0.5) translate(50%, -50%);
+      transform: scale(0.5) translate(50%, -50%);
+      border-radius: 50%;
+      text-align: center;
+    }
+  }
+  .list-menu-item.active {
+    background-color: #fff;
+    color: #333333;
+    font-weight: bold;
+  }
+  .list-menu-item img {
+    width: 15px;
+    height: 15px;
+    margin-right: 3px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
