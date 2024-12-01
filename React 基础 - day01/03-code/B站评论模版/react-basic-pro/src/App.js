@@ -1,5 +1,8 @@
+import { useState } from 'react'
 import './App.scss'
 import avatar from './images/bozai.png'
+import _ from 'lodash'
+import classNames from 'classnames'
 
 /**
  * 评论列表的渲染和操作
@@ -72,8 +75,38 @@ const tabs = [
   { type: 'hot', text: '最热' },
   { type: 'time', text: '最新' },
 ]
+//
 
 const App = () => {
+  const[commentList,setCommentList] = useState(_.orderBy(defaultList,'like','desc'))
+
+  // delete function 
+  const handleDel=(id) =>{
+    console.log(id)
+    //  To filter a commentList
+    setCommentList(commentList.filter(item => item.rpid !== id))
+  }
+
+
+
+  
+  // tab switch function
+  // 1.If you want to record the type (or any other property) of the clicked object in this 
+  // 2. to controll the active class name display through match recording type and traversing every type 
+  
+  let[type,setType] = useState('hot')
+
+  const handleTableChange =(type) => {
+    console.log(type)
+    setType(type)
+    // sort base on like
+  if(type === 'hot') {
+    setCommentList(_.orderBy(commentList,'like','desc'))
+  }else {
+    setCommentList(_.orderBy(commentList,'ctime','desc'))
+
+}
+  }
   return (
     <div className="app">
       {/* 导航 Tab */}
@@ -86,8 +119,10 @@ const App = () => {
           </li>
           <li className="nav-sort">
             {/* 高亮类名： active */}
-            <span className='nav-item'>最新</span>
-            <span className='nav-item'>最热</span>
+            {tabs.map(item=> <span key={item.type} 
+            onClick={()=> handleTableChange(item.type)}
+                className ={classNames('nav-item',{active : type === item.type})}>
+              {item.text}</span>)}
           </li>
         </ul>
       </div>
@@ -116,13 +151,15 @@ const App = () => {
         {/* 评论列表 */}
         <div className="reply-list">
           {/* 评论项 */}
-          <div className="reply-item">
+          {commentList.map(item => (
+            <div key={item.rpid}  className="reply-item">
             {/* 头像 */}
             <div className="root-reply-avatar">
               <div className="bili-avatar">
                 <img
                   className="bili-avatar-img"
                   alt=""
+                  src={item.user.avatar}
                 />
               </div>
             </div>
@@ -130,24 +167,28 @@ const App = () => {
             <div className="content-wrap">
               {/* 用户名 */}
               <div className="user-info">
-                <div className="user-name">jack</div>
+                <div className="user-name">{item.user.uname}</div>
               </div>
               {/* 评论内容 */}
               <div className="root-reply">
-                <span className="reply-content">这是一条评论回复</span>
+                <span className="reply-content">{item.content}</span>
                 <div className="reply-info">
                   {/* 评论时间 */}
-                  <span className="reply-time">{'2023-11-11'}</span>
+                  <span className="reply-time">{item.ctime}</span>
                   {/* 评论数量 */}
-                  <span className="reply-time">点赞数:{100}</span>
-                  <span className="delete-btn">
+                  <span className="reply-time">点赞数:{item.like}</span>
+                  {/* condition: if use.id === item.user.id */}
+                  {user.uid === item.user.uid &&
+                  <span className="delete-btn" onClick={()=> handleDel(item.rpid)}>
                     删除
-                  </span>
+                  </span>}
 
                 </div>
               </div>
             </div>
           </div>
+        ))}
+          
         </div>
       </div>
     </div>
